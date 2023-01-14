@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kenda</title>
+</head>
+<body>
+
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="my_image">
+    <button type="submit">Upload</button>
+  </form>
+        
+
+{% if img_inf %}
+<img src="{{img_inf}}"  width=600px/>
+{% endif %}
+
+
+
+</body>
+</html>
